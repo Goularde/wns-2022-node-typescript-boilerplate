@@ -1,4 +1,4 @@
-import { UpvoteEntity } from "../entity/UpvoteEntity";
+import { UpvoteEntity } from "../entities/UpvoteEntity";
 import { dataSource } from "../utils";
 import { Request, Response } from "express";
 
@@ -35,7 +35,6 @@ export const deleteUpvote = async (
       res.send(err);
     });
 };
-
 
 export const addUpvote = async (req: Request, res: Response): Promise<void> => {
   const upvoteId = Number(req.params.upvoteId);
